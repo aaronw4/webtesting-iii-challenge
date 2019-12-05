@@ -15,8 +15,14 @@ test('render without crashing', () => {
     expect(element).toBeVisible();
  });
  
-test('button disabled', async () => {
+test('Lock Gate button disabled', async () => {
     const wrapper = rtl.render(<Controls/>);
     const element = wrapper.getByText('Lock Gate');
     expect(element).toBeDisabled();
+ });
+ 
+test('Close Gate button is working', async () => {
+    const wrapper = rtl.render(<Controls/>);
+    const element = wrapper.getByText('Close Gate');
+    expect(element).not.toBeDisabled();
  });
