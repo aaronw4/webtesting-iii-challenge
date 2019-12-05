@@ -15,7 +15,7 @@ test('render without crashing', () => {
     expect(element).toBeVisible();
  });
  
-test('button disabled', () => {
+test('button disabled', async () => {
     const wrapper = rtl.render(<Controls/>);
     const element = wrapper.getByText('Lock Gate');
     expect(element).toBeDisabled();
